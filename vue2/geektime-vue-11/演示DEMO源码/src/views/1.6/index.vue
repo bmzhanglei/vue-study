@@ -37,6 +37,11 @@ export default {
       destroyClock: false,
       name: "vue"
     };
+  },
+  mounted(){
+    setTimeout(()=>{
+      this.name = "react"
+    },3000)
   }
 };
 </script>
