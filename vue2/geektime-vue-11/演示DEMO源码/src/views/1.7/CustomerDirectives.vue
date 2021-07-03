@@ -23,6 +23,7 @@ export default {
         console.log("update");
       },
       componentUpdated(el, binding) {
+        console.log(el.childNodes)
         el.removeChild(el.childNodes[el.childNodes.length - 1]);
         el.appendChild(document.createTextNode(binding.value));
         console.log("componentUpdated");

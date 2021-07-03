@@ -13,12 +13,12 @@ export default {
     ChildrenE,
     ChildrenF
   },
-  provide() {
-    return {
-      theme: {
-        color: "yellow"
-      }
-    };
-  }
+  // provide() {
+  //   return {
+  //     theme: {
+  //       color: "yellow"
+  //     }
+  //   };
+  // }
 };
 </script>

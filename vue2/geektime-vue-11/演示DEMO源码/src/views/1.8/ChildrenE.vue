@@ -9,13 +9,14 @@ export default {
   components: {},
   inject: {
     theme: {
-      default: () => ({})
+      default: ()=>({color:"pink"})
     }
   },
   methods: {
     handleClick() {
       if (this.theme.changeColor) {
-        this.theme.changeColor("green");
+        const color= this.theme.color==="blue"?"green":"blue"
+        this.theme.changeColor(color);
       }
     }
   }

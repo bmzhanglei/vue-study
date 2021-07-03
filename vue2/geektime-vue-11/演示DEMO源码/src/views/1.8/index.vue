@@ -1,7 +1,7 @@
 <template>
   <div>
-    <ChildrenA />
-    <!-- <ChildrenA1 /> -->
+    <!-- <ChildrenA /> -->
+    <ChildrenA1 />
   </div>
 </template>
 <script>
@@ -10,7 +10,7 @@ import ChildrenA1 from "./ChildrenA_a";
 export default {
   components: {
     ChildrenA,
-    // ChildrenA1
+    ChildrenA1
   }
 };
 </script>

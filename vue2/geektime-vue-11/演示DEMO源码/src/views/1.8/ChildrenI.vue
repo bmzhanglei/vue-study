@@ -1,5 +1,5 @@
 <template functional>
-  <div class="border2">
+  <div class="border2">   
     <h3 :style="{ color: injections.theme.color }">I 结点</h3>
   </div>
 </template>
@@ -7,8 +7,8 @@
 export default {
   inject: {
     theme: {
-      default: () => ({})
+      default: ()=>({color:"pink"})
     }
-  }
+  },
 };
 </script>

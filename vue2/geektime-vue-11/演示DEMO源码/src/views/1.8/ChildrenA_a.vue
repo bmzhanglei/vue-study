@@ -18,10 +18,17 @@ export default {
     ChildrenC,
     ChildrenD
   },
+  data(){
+    return {
+      theme:{
+        color:"blue"
+      }
+    }
+  },
   provide() {
-    this.theme = Vue.observable({
-      color: "blue"
-    });
+    // this.theme = Vue.observable({
+    //   color: "blue"
+    // });
     return {
       theme: this.theme
     };
