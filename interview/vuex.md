@@ -16,20 +16,18 @@
 * Action: 触发mutation方法
 * Module: Vue.set动态添加state到响应式数据中
 
-#### router 解决的问题
-* 监听URL的变化，并在变化前后执行响应的逻辑
-* 不同的URL对应不同的组件
-* 提供多种方式改变URL的API(URL的改变不能导致浏览器刷新)
+### 16、你使用过 Vuex 吗？
+Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。每一个 Vuex 应用的核心就是 store（仓库）。“store” 基本上就是一个容器，它包含着你的应用中大部分的状态 ( state )。
 
-#### 使用方式
-* 提供一个路由配置表，不同URL对用不同的组件配置
-* 初始化路由实例 new VueRouter()
-* 挂载到Vue实例上
-* 提供一个路由占位，用来挂载URL匹配到的组件
+（1）Vuex 的状态存储是响应式的。当 Vue 组件从 store 中读取状态的时候，若 store 中的状态发生变化，那么相应的组件也会相应地得到高效更新。
 
-#### 路由类型
-* Hash模式 丑，无法使用锚点定位
-* History模式 需要后端配合，IE9不兼容（可使用强制刷新处理）
+（2）改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation。这样使得我们可以方便地跟踪每一个状态的变化。
 
-#### 底层原理
-* 通过 router-link,$router.push,a href,浏览器前进后退,手动更改url 触发 updateRoute -> Vue.util.defineReactive_route --> router-view
+主要包括以下几个模块：
+
+State：定义了应用状态的数据结构，可以在这里设置默认的初始状态。
+Getter：允许组件从 Store 中获取数据，mapGetters 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性。
+Mutation：是唯一更改 store 中状态的方法，且必须是同步函数。
+Action：用于提交 mutation，而不是直接变更状态，可以包含任意异步操作。
+Module：允许将单一的 Store 拆分为多个 store 且同时保存在单一的状态树中。
+
