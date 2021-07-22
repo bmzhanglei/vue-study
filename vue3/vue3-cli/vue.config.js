@@ -35,6 +35,15 @@ module.exports = {
 
   chainWebpack: config => {//去掉v-i18n浏览器告警部分    
     config.resolve.alias.set('vue-i18n', 'vue-i18n/dist/vue-i18n.cjs.js').set('assets', "@/assets")  //引入文件添加别名 
+    const svgRule = config.module.rule("svg");
+    svgRule.uses.clear();
+    svgRule
+    .use("svg-sprite-loader")
+    .loader("svg-sprite-loader")
+    .options({
+       symbolId: "icon-[name]"
+    })
+    .end();
   },
   configureWebpack: (config) => {     
     // process.env为环境变量，分别对应.env.development文件和.env.production文件 此处表示加快开发环境打包速度
