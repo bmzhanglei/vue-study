@@ -17,6 +17,7 @@ props:{
   }
 }
 ```
+
 * 原生属性attrs  inheritAttrs:false
 * 特殊属性class、style
 * 普通事件

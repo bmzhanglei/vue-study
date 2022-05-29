@@ -3,7 +3,7 @@ import createPersistedState from 'vuex-persistedstate'
 import getters from './getters.js'
 import modules from "./store";
 
-// console.log(modules)
+console.log('modules--->',modules)
 
 export default createStore({
   modules,

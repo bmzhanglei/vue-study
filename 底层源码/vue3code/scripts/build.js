@@ -13,6 +13,7 @@ const targets = fs.readdirSync("packages").filter(f=>{
 
 //对我们的目标进行依次打包，并行打包
 async function build(target){  // rollup -c --environment
+    
     await execa('rollup',['-c','--environment',`TARGET:${target}`],{stdio:"inherit"}); //当子进程打包的信息共享给父进程
 //   console.log(target)
 }

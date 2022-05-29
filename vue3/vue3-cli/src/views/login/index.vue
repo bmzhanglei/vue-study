@@ -12,13 +12,13 @@
 <script>
 import { computed, onMounted, getCurrentInstance,ref } from 'vue';
 import {userLogin} from '@/apis/user'
-import AppLink from '@/components/AppLink.vue'
+// import AppLink from '@/components/AppLink.vue'
 import  router from "@/router";
 import { useStore ,mapState,mapGetters,mapMutations} from "vuex";
  import constantRoutes from  '@/router/constantModules/userManager'
 import { onBeforeRouteLeave ,onBeforeRouteUpdate} from 'vue-router';
 export default {
-    components:{AppLink},
+    // components:{AppLink},
     computed:{
         // ...mapState(['user']), 
         // ...mapState('user',{
